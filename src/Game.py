@@ -131,6 +131,9 @@ class Game:
         print()
         print()
         time.sleep(1)
+        
+        if playerScore > totalRounds / 2 or computerScore > totalRounds / 2:
+            currentRound = totalRounds + 1
 
     if playerScore == computerScore:
         print(Fore.CYAN + "Draw! You'll have better luck next time.")
