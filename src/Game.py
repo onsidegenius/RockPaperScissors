@@ -4,8 +4,7 @@ import os, sys
 import random
 import time
 from pip._vendor.colorama import Fore
-from Shape import Shape
-from Result import Result
+from enum import Enum
 
 
 os.system("")
@@ -43,6 +42,16 @@ def whoWins(playerShape, computerShape):
         return Result.PLAYER
     return Result.COMPUTER
 
+
+class Result(Enum):
+    PLAYER = 1
+    COMPUTER = 2
+    DRAW = 3
+
+class Shape(Enum):
+    SCISSORS = 1
+    ROCK = 2
+    PAPER = 3
 
 class Game:
     print()
